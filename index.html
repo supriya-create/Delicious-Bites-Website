@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Restaurant</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header and Navigation */
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 1em;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5em 2em;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        #home {
+            background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #home h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        #home p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            padding: 0.8em 1.5em;
+            color: #333;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Menu Section */
+        #menu {
+            background-color: #fff;
+            color: #333;
+            padding: 4em 2em;
+        }
+
+        .menu-section {
+            margin-bottom: 2em;
+        }
+
+        .menu-item {
+            margin: 1em 0;
+            padding: 1em;
+            background: #ffebcd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        #about {
+            background-image: url('https://images.unsplash.com/photo-1555992336-03a23e5b1d8b');
+            background-color: darkred;
+        }
+
+        /* Booking and Billing Section */
+        #booking-billing {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 4em 2em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input, select, textarea {
+            margin-bottom: 1em;
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 0.8em;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                
+                <li><a href="#booking-billing">Booking & Billing</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h1>Welcome to Delicious Bites</h1>
+        <p>Experience culinary delights with us</p>
+        <a href="#menu" class="btn">View Our Menu</a>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+
+        <!-- Appetizers -->
+        <div class="menu-section">
+            <h3>Appetizers</h3>
+            <div class="menu-item">
+                <h4>Bruschetta</h4>
+                <p>$8 - Fresh tomatoes, basil, and olive oil on toasted bread.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Stuffed Mushrooms</h4>
+                <p>$10 - Mushrooms stuffed with cheese and herbs, baked to perfection.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Garlic Bread</h4>
+                <p>$5 - Classic garlic bread with melted butter and herbs.</p>
+            </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-section">
+            <h3>Main Dishes</h3>
+            <div class="menu-item">
+                <h4>Margherita Pizza</h4>
+                <p>$15 - A classic pizza with fresh mozzarella and basil.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Cheeseburger</h4>
+                <p>$12 - Juicy burger with cheddar, lettuce, and tomato.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Grilled Salmon</h4>
+                <p>$20 - Fresh salmon grilled to perfection with herbs and lemon.</p>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-section">
+            <h3>Desserts</h3>
+            <div class="menu-item">
+                <h4>Chocolate Lava Cake</h4>
+                <p>$8 - Warm, gooey chocolate cake served with vanilla ice cream.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Tiramisu</h4>
+                <p>$7 - Traditional Italian dessert with layers of mascarpone and espresso-soaked ladyfingers.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Cheesecake</h4>
+                <p>$6 - Creamy cheesecake with a graham cracker crust.</p>
+            </div>
+        </div>
+
+        <!-- Beverages -->
+        <div class="menu-section">
+            <h3>Beverages</h3>
+            <div class="menu-item">
+                <h4>Coffee</h4>
+                <p>$3 - Freshly brewed coffee, available in various styles.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Soft Drinks</h4>
+                <p>$2 - Choice of cola, lemonade, or other soft drinks.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Red Wine</h4>
+                <p>$10 - A selection of fine red wines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    
+    <!-- Booking and Billing Section -->
+    <section id="booking-billing" class="section">
+        <h2>Booking & Billing</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Booking Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+            <label for="special-requests">Mention Items </label>
+            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+            <section id="about" class="section">
+                <h2>About Us</h2>
+                <p>Delicious Bites started with a dream to serve food that warms the soul and delights the taste buds. Founded by culinary enthusiasts with a deep passion for quality ingredients, we believe that every meal should be an experience. From farm-to-table ingredients to hand-picked wines, we carefully curate every dish to ensure it exceeds your expectations.</p>
+                <p>Our chefs bring flavors from around the world, using innovative techniques and a touch of tradition to create dishes that are both familiar and exciting. At Delicious Bites, we prioritize sustainable sourcing and work closely with local farmers and suppliers. We aim to provide a dining experience that is as responsible as it is remarkable, serving our community with care and commitment.</p>
+            </section>
+        
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for your booking! We'll contact you soon with the details.");
+        });
+    </script>
+</body>
+</html>
